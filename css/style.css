@@ -4,14 +4,14 @@
 @import url('../css/jquery.listtopie.css');
 @import url('../css/animations.css');
 
-/* 
+/*
 * Google Fonts
 
 * BASIC STYLE
-  - General Style    
-  - Headings Style    
-  - Button Style    
-  - Form Style   
+  - General Style
+  - Headings Style
+  - Button Style
+  - Form Style
 
 * HEADER
 
@@ -63,7 +63,7 @@ input:focus {outline: unset; box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.5);}
 .justify-center{justify-content: center; display: flex;}
 .sub-heading {text-transform: uppercase; font-family: 'Poppins', sans-serif; padding-bottom: 3px;}
 .heading-title {font-size: 40px; font-weight: 600; padding-bottom: 18px;}
-.heading-des {max-width: 580px; margin: 0 auto;}
+.heading-des {max-width: 650px; margin: 0 auto;}
 .heading-title-2 {font-size: 45px; font-weight: 600;}
 .sub-heading-2 {font-size: 30px; font-weight: 600;}
 .z-index-2{z-index: 2;}
@@ -125,7 +125,7 @@ header {padding: 40px 0px; position: fixed; width: 100%; top: 0; left: 0; z-inde
 header .container{position: relative;}
 .logo img:hover {opacity: 0.5;}
 .menu {display: flex; align-items: center; justify-content: flex-end;}
-.menu ul li{display: inline-block; padding: 0px 26px; position: relative;}    
+.menu ul li{display: inline-block; padding: 0px 26px; position: relative;}
 .menu ul li a{font-weight: 700; text-transform: uppercase; font-size: 16px; position: relative; padding: 10px 0px 30px 0px;}
 .signin {margin-left: 30px;}
 .signin .btn{padding: 9px 30px;}
@@ -541,7 +541,7 @@ footer.bg-pattern{background-position: center 125px; padding-bottom: 50px;}
 .subscribe{position: relative;}
 .subscribe label{font-size: 18px; padding-bottom: 15px;}
 .subscribe .form-control{height: 50px; border: 0; border-radius: 5px; padding-left: 25px; padding-right: 125px;}
-.subscribe .submit{font-size: 16px; font-weight: 700; position: absolute; bottom: 0; right: 0; height: 50px; border: 0; width: 115px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;} 
+.subscribe .submit{font-size: 16px; font-weight: 700; position: absolute; bottom: 0; right: 0; height: 50px; border: 0; width: 115px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;}
 .copyright{padding-top: 50px;}
 .copyright p a{text-decoration: underline;}
 .copyright ul{text-align: right;}

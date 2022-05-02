@@ -89,35 +89,38 @@
             </div>
             <div class="col-md-6 wow fadeInRight">
                 <h3 class="blog-comment-heading">Leave a message here</h3>
-                <form>
+                <form class="" id="searchForm" method="post" action="#">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Name*" required="">
+                                <input type="text" class="form-control" id="name" placeholder="Name*" required="">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Email*" required="">
+                                <input type="text" class="form-control" id="email" placeholder="Email*" required="">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Subject*" required="">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject*" required="">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Phone*" required="">
+                                <input type="text" class="form-control" id="phone" placeholder="Phone*" required="">
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <textarea class="form-control" placeholder="Massage*" required></textarea>
+                                <textarea class="form-control" placeholder="Massage*" id="message" required></textarea>
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <button class="btn">submit</button>
+                            <button class="btn" id="sendEmail">submit</button>
+                        </div>
+                        <div class="col-md-12" id="emailBox">
+
                         </div>
                     </div>
                 </form>
@@ -174,7 +177,39 @@
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/animation.js"></script>
 <script src="js/custom.js"></script>
+<script type="javascript">
+    function send() {
 
+    }
+</script>
+
+<script>
+    // Attach a submit handler to the form
+    $("#searchForm").submit(function (event) {
+        // Stop form from submitting normally
+        event.preventDefault();
+        var data = {
+            name: $("#name").val(),
+            address: $("#email").val(),
+            subject: $("#subject").val(),
+            phone: $("#phone").val(),
+            message: $("#message").val(),
+        }
+
+        $('#sendEmail').html('sending..');
+
+        $.ajax({
+            url: 'http://creamer.local/umbra-financial-email',
+            type: 'post',
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (data) {
+                console.log(data);
+                $('#sendEmail').html(data);
+            },
+            data: JSON.stringify(data)
+        });
+    });
+</script>
 </body>
-
 </html>

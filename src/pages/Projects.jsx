@@ -1,7 +1,12 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Link } from "react-router-dom";
 
 export default function Projects() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <>
             <section className="sub-page-banner parallax" id="banner">
@@ -19,7 +24,6 @@ export default function Projects() {
                     </div>
                 </div>
             </section>
-
             <section className="team-part skyblue bg-pattern pt-100 pb-55">
                 <div className="container">
                     <div className="row">
